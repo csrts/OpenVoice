@@ -13,7 +13,7 @@ module.exports = {
     "method": "shell.run",
     "params": {
       "venv": "env",
-      "message": "git clone https://huggingface.co/spaces/cocktailpeanut/OpenVoice app",
+      "message": "git clone https://github.com/myshell-ai/OpenVoice app",
     }
   }, {
     "method": "shell.run",
@@ -21,8 +21,7 @@ module.exports = {
       "path": "app",
       "venv": "env",
       "message": [
-        "pip install -r requirements_locally.txt",
-        "{{(gpu === 'nvidia' ? self.cmds.nvidia : (gpu === 'amd' ? self.cmds.amd : self.cmds.default))}}"
+        "pip install -r requirements.txt"
       ]
     }
   }, {
@@ -34,7 +33,7 @@ module.exports = {
   }, {
     "method": "notify",
     "params": {
-      "html": "Click the 'start' tab to get started!"
+      "html": "单击 'start' 按扭启动OpenVoice!"
     }
   }]
 }
