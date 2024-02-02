@@ -5,8 +5,8 @@ module.exports = {
     "params": {
       "path": "app",
       "venv": "env",
-      "message": "python app_locally.py",
-      "on": [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
+      "message": "python openvoice_app.py",
+      "on": [{ "event": "/http://127.0.0.1:7860", "done": true }]
     }
   }, {
     "method": "local.set",
